@@ -36,12 +36,6 @@ main .ck-editor[role='application'] .ck.ck-content,
 	background: #fff;
 	border: 1px solid hsl(0, 0%, 70%);
 	width: 100%;
-	padding: 20px 40px;
-	min-height: 100px ;
-	max-height: 500px ;
-	color: #5a5e9a;
-	font-size: 13px;
-	font-weight: 700;
 }
 
 /* Because of sidebar `position: relative`, Edge is overriding the outline of a focused editor. */
@@ -500,7 +494,3 @@ footer {
 		font-size: 1.5em;
 	}
 }
-
-
-
-
