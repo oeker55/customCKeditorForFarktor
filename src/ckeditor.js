@@ -51,8 +51,8 @@ Editor.defaultConfig = {
 	toolbar: {
 		items: [
 			'bold',
-			'italic',
 			'underline',
+			'italic',
 			'|',
 			'link',
 			'|',
