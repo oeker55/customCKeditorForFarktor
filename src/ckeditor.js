@@ -4,7 +4,6 @@
  */
 import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor.js';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment.js';
-import AutoLink from '@ckeditor/ckeditor5-link/src/autolink.js';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold.js';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code.js';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials.js';
@@ -12,6 +11,11 @@ import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolo
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
+import Image from '@ckeditor/ckeditor5-image/src/image.js';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
+import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle.js';
+import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar.js';
+import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload.js';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic.js';
 import Link from '@ckeditor/ckeditor5-link/src/link.js';
 import List from '@ckeditor/ckeditor5-list/src/list.js';
@@ -27,7 +31,6 @@ class Editor extends ClassicEditor {}
 // Plugins to include in the build.
 Editor.builtinPlugins = [
 	Alignment,
-	AutoLink,
 	Bold,
 	Code,
 	Essentials,
@@ -35,6 +38,11 @@ Editor.builtinPlugins = [
 	FontColor,
 	FontFamily,
 	FontSize,
+	Image,
+	ImageResize,
+	ImageStyle,
+	ImageToolbar,
+	ImageUpload,
 	Italic,
 	Link,
 	List,
@@ -67,6 +75,7 @@ Editor.defaultConfig = {
 			'|',
 			'alignment',
 			'|',
+			'imageUpload',
 			'insertTable',
 			'|',
 			'code',
@@ -76,6 +85,14 @@ Editor.defaultConfig = {
 		]
 	},
 	language: 'tr',
+	image: {
+		toolbar: [
+			'imageTextAlternative',
+			'imageStyle:inline',
+			'imageStyle:block',
+			'imageStyle:side'
+		]
+	},
 	table: {
 		contentToolbar: [
 			'tableColumn',
