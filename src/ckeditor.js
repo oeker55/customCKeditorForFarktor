@@ -4,7 +4,10 @@
  */
 import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor.js';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment.js';
+import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat.js';
+import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote.js';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold.js';
+import CKFinderUploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter.js';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code.js';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials.js';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor.js';
@@ -12,6 +15,7 @@ import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import Image from '@ckeditor/ckeditor5-image/src/image.js';
+import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption.js';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle.js';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar.js';
@@ -31,7 +35,10 @@ class Editor extends ClassicEditor {}
 // Plugins to include in the build.
 Editor.builtinPlugins = [
 	Alignment,
+	Autoformat,
+	BlockQuote,
 	Bold,
+	CKFinderUploadAdapter,
 	Code,
 	Essentials,
 	FontBackgroundColor,
@@ -39,6 +46,7 @@ Editor.builtinPlugins = [
 	FontFamily,
 	FontSize,
 	Image,
+	ImageCaption,
 	ImageResize,
 	ImageStyle,
 	ImageToolbar,
@@ -88,6 +96,7 @@ Editor.defaultConfig = {
 	image: {
 		toolbar: [
 			'imageTextAlternative',
+			'toggleImageCaption',
 			'imageStyle:inline',
 			'imageStyle:block',
 			'imageStyle:side'
